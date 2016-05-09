@@ -1,6 +1,6 @@
 # both 32-bit (x86) AND a 64-bit (AMD64) installer available
 {% set PROGRAM_FILES = "%ProgramFiles%" %}
-jre:
+jre1:
   '7.0.790':
     {% if grains['cpuarch'] == 'AMD64' %}
     full_name: 'Java 7 Update 79 (64-bit)'
