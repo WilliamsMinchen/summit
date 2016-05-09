@@ -4,7 +4,7 @@
 {% else %}
     {% set PROGRAM_FILES = "%ProgramFiles%" %}
 {% endif %}
-app:
+note:
   '6.8.7':
     full_name: Notepad++
     installer: 'salt://win/repo-ng/npp/npp.6.8.7.Installer.exe'
