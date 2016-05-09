@@ -4,7 +4,7 @@
 {% else %}
     {% set PROGRAM_FILES = "%ProgramFiles%" %}
 {% endif %}
-npp:
+app:
  
   '6.8.7':
     full_name: Notepad++
