@@ -21,4 +21,8 @@ com:
 	reboot: False
 	# due to winrepo installer limitations you need to manually download the exe from
 	# http://javadl.sun.com/webapps/download/AutoDL?BundleId=106369
+<<<<<<< HEAD
 	# and put it on the winrepo on master to install it the 'salt://win/repo-ng/jre/... way
+=======
+	# and put it on the winrepo on master to install it the 'salt://win/repo-ng/jre/... way
+>>>>>>> f67733139d1fdef0dc063dcdedc332751f0625f7
