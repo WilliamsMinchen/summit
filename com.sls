@@ -1,7 +1,7 @@
 com:
   '7.0.90':
 	{% if grains['cpuarch'] == 'AMD64' %}
-	full_name: 'Java 7 Update 79 (64-bit)'
+	full_name: 'com'
 	installer: 'salt://win/repo-ng/jre/jre-7u9-windows-x64.exe'
 	uninstall_flags: '/qn /x {26A24AE4-039D-4CA4-87B4-2F06417079FF} /norestart'    
 	{% elif grains['cpuarch'] == 'x86' %}
