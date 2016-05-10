@@ -1,16 +1,15 @@
-# just 32-bit x86 installer available
-{% if grains['cpuarch'] == 'AMD64' %}
-    {% set PROGRAM_FILES = "%ProgramFiles(x86)%" %}
-{% else %}
-    {% set PROGRAM_FILES = "%ProgramFiles%" %}
-{% endif %}
 note:
-  '6.8.7':
-    full_name: Notepad++
-    installer: 'salt://win/repo-ng/npp/npp.6.8.7.Installer.exe'
-    install_flags: '/S'
-    uninstaller: '{{ PROGRAM_FILES }}\Notepad++\uninstall.exe'
-    uninstall_flags: '/S'
-    msiexec: False
+  '1.4.3.0':
+    full_name: 'MySQL Installer - Community'
+    installer: 'http://cdn.mysql.com/Downloads/MySQLInstaller/mysql-installer-community-5.6.23.0.msi'
+    install_flags: '/quiet /norestart'
+    uninstaller: 'http://cdn.mysql.com/Downloads/MySQLInstaller/mysql-installer-community-5.6.23.0.msi'
+    uninstall_flags: '/qn /norestart'
+    msiexec: True
     locale: en_US
-    reboot: False
+    reboot: False    
+#
+# Read for MySQL Server 5.6.23.0 Community installation instructions:
+# https://dev.mysql.com/doc/refman/5.6/en/mysql-installer-gui.html
+# https://dev.mysql.com/doc/refman/5.6/en/MySQLInstallerConsole.html
+
