@@ -15,6 +15,6 @@ winrar:
     uninstaller: '{{ PROGRAM_FILES }}\WinRAR\UnRAR.exe' 
     install_flags: '/SP- /verysilent /norestart'
     uninstall_flags: '/SP- /verysilent /norestart'
-    msiexec: True
+    msiexec: False
     locale: en_US
     reboot: False
