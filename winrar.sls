@@ -6,15 +6,16 @@
 winrar:
   '5.1.3':
     {% if grains['cpuarch'] == 'AMD64' %}
-    full_name: 'WinRAR 5.1.3'
-    installer: 'http://www.rarlab.com/rar/winrar-x64-54b1.exe'
-	{% elif grains['cpuarch'] == 'x86' %}
-    full_name: 'WinRAR 5.1.3'
-	installer: 'http://www.rarlab.com/rar/wrar531sc.exe'
-	{% endif %}
-	install_flags: '/SP- /verysilent /norestart'
-	uninstaller: '{{ PROGRAM_FILES }}\WinRAR\UnRAR.exe'
-    uninstall_flags: '/SP- /verysilent /norestart'
-	msiexec: False
+    full_name: '7-Zip 16.00 (x64 edition)'
+    installer: 'http://d.7-zip.org/a/7z1600-x64.msi'
+    uninstaller: 'http://d.7-zip.org/a/7z1600-x64.msi'
+    {% elif grains['cpuarch'] == 'x86' %}
+    full_name: '7-Zip 16.00'
+    installer: 'http://d.7-zip.org/a/7z1600.msi'
+    uninstaller: 'http://d.7-zip.org/a/7z1600.msi'    
+    {% endif %}
+    install_flags: '/qn /norestart'
+    uninstall_flags: '/qn /norestart'
+    msiexec: True
     locale: en_US
     reboot: False
