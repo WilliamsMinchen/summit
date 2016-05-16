@@ -12,7 +12,7 @@ winrar:
     full_name: '7-Zip 16.00'
     installer: 'http://d.7-zip.org/a/7z1600.msi'   
     {% endif %}
-	uninstaller: 'http://d.7-zip.org/a/7z1600.msi' 
+    uninstaller: 'http://d.7-zip.org/a/7z1600.msi' 
     install_flags: '/qn /norestart'
     uninstall_flags: '/qn /norestart'
     msiexec: True
