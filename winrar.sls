@@ -5,7 +5,7 @@
     {% set PROGRAM_FILES = "%ProgramFiles%" %}
 {% endif %}
 winrar:
-  '5.3.1'
+  '5.3.1':
     {% if grains['cpuarch'] == 'AMD64' %}
 	full_name: 'WinRAR'
 	installer: 'http://www.rarlab.com/rar/winrar-x64-531sc.exe'
