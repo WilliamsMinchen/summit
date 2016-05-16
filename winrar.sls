@@ -13,8 +13,8 @@ winrar:
     installer: 'salt://repos/winrar/v5.31/wrar531sc.exe'   
     {% endif %}
     uninstaller: '{{ PROGRAM_FILES }}\WinRAR\UnRAR.exe' 
-    install_flags: '/SP- /verysilent /norestart'
-    uninstall_flags: '/SP- /verysilent /norestart'
+    install_flags: '-silent -eulaAccepted'
+    uninstall_flags: '-uninstall'
     msiexec: False
     locale: en_US
     reboot: False
