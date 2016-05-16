@@ -8,7 +8,7 @@ winrar:
     full_name: 'WinRAR 5.1.3'
     installer: 'http://www.rarlab.com/rar/wrar531sc.exe'
     install_flags: '/SP- /verysilent /norestart'
-    uninstaller: '{{ PROGRAM_FILES }}\Audacity\unins000.exe'
+    uninstaller: '{{ PROGRAM_FILES }}\WinRAR\UnRAR.exe'
     uninstall_flags: '/SP- /verysilent /norestart' 
     msiexec: False
     locale: en_US
