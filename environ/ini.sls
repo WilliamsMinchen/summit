@@ -1,2 +1,5 @@
 javaenv:
-    cmd.run: 'wmic ENVIRONMENT create name="foo",username="<system>",VariableValue="D:\Program Files\Java\jdk1.7.0_51\bin" '
+    environ.setenv:
+        - name: 'JAVA_HOME'
+        - value: 'C:\Program Files\Java\jdk1.8.0_741'
+        - update_minion: True
