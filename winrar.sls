@@ -7,10 +7,10 @@ winrar:
   '5.1.3':
     {% if grains['cpuarch'] == 'AMD64' %}
     full_name: 'WinRAR 5.1.3 (x64)'
-    installer: 'http://w.x.baidu.com/alading/anquan_soft_down_all/17535'
+    installer: 'salt://repos/winrar/v5.31/winrar-x64-54b1.exe'
     {% elif grains['cpuarch'] == 'x86' %}
     full_name: 'WinRAR 5.1.3'
-    installer: 'http://w.x.baidu.com/alading/anquan_soft_down_all/10849'   
+    installer: 'salt://repos/winrar/v5.31/wrar531sc.exe'   
     {% endif %}
     uninstaller: '{{ PROGRAM_FILES }}\WinRAR\UnRAR.exe' 
     install_flags: '/SP- /verysilent /norestart'
