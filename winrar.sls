@@ -6,15 +6,9 @@
 {% endif %}
 winrar:
   '5.3.1':
-    {% if grains['cpuarch'] == 'AMD64' %}
-	full_name: 'WinRAR'
-	installer: 'http://www.rarlab.com/rar/winrar-x64-531sc.exe'
-	uninstall_flags: '/SP- /verysilent /norestart'
-	{% else grains['cpuarch'] == 'x86' %}
 	full_name: 'WinRAR'
 	installer: 'http://www.rarlab.com/rar/wrar531sc.exe'
-	uninstall_flags: '/SP- /verysilent /norestart' 
-	{% endif %}
+	uninstall_flags: '/SP- /verysilent /norestart'
 	uninstaller: '{{ PROGRAM_FILES }}\WinRAR\UnRAR.exe'
     install_flags: '/s REBOOT=Suppress SPONSORS=0'
 	msiexec: False
