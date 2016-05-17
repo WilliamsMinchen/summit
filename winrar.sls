@@ -16,6 +16,6 @@ winrar:
     {% endif %}
     install_flags: '/qn /norestart'
     uninstall_flags: '/qn /norestart'
-    msiexec: False
+    msiexec: True
     locale: en_US
     reboot: False
