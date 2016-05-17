@@ -4,17 +4,18 @@
     {% set PROGRAM_FILES = "%ProgramFiles%" %}
 {% endif %}
 winrar:
-  '5.1.3':
+  '16.00':
     {% if grains['cpuarch'] == 'AMD64' %}
-    full_name: 'WinRAR 5.1.3 (x64)'
-    installer: 'salt://repos/winrar/v5.31/winrar-x64-54b1.exe'
+    full_name: '7-zip 16.00 (x64)'
+    installer: 'http://www.7-zip.org/a/7z1600-x64.msi'
+    uninstaller: 'http://www.7-zip.org/a/7z1600-x64.msi'
     {% elif grains['cpuarch'] == 'x86' %}
-    full_name: 'WinRAR 5.1.3'
-    installer: 'salt://repos/winrar/v5.31/wrar531sc.exe'   
+    full_name: '7-zip 16.00'
+    installer: 'http://www.7-zip.org/a/7z1600.msi'
+    uninstaller: 'http://www.7-zip.org/a/7z1600.msi'	
     {% endif %}
-    uninstaller: '{{ PROGRAM_FILES }}\WinRAR\UnRAR.exe' 
-    install_flags: '-silent -eulaAccepted'
-    uninstall_flags: '-uninstall'
+    install_flags: '/qn /norestart'
+    uninstall_flags: '/qn /norestart'
     msiexec: False
     locale: en_US
     reboot: False
