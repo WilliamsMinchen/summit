@@ -3,7 +3,7 @@
 redis:
   2.4.6:
     {% if grains['cpuarch'] == 'AMD64' %}
-    full_name: 'redis(x64)'
+    full_name: 'redis'
     installer: salt://redis/redis-2.4.6-setup-64-bit.exe
     uninstaller: '%PROGRAMFILES%\unins000.exe'
     {% elif grains['cpuarch'] == 'x86' %}
