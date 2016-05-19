@@ -11,8 +11,8 @@ redis:
     installer: salt://redis/redis-2.4.6-setup-32-bit.exe
     uninstaller: '%PROGRAMFILES%\unins000.exe'    
     {% endif %}
-    install_flags: '/SP- /verysilent /norestart'
-    uninstall_flags: '/SP- /silent /verysilent /suppressmsgboxes /norestart /UNINSTMODE'
+    install_flags: '-silent -eulaAccepted'
+    uninstall_flags: '-uninstall'
     msiexec: False
     locale: en_US
     reboot: False 
