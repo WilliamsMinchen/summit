@@ -3,11 +3,11 @@
 redis:
   2.4.6:
     {% if grains['cpuarch'] == 'AMD64' %}
-    full_name: 'redis'
+    full_name: 'Redis'
     installer: salt://redis/redis-2.4.6-setup-64-bit.exe
     uninstaller: '%PROGRAMFILES%\unins000.exe'
     {% elif grains['cpuarch'] == 'x86' %}
-    full_name: 'AWS Command Line Interface'
+    full_name: 'Redis'
     installer: salt://redis/redis-2.4.6-setup-32-bit.exe
     uninstaller: '%PROGRAMFILES%\unins000.exe'    
     {% endif %}
